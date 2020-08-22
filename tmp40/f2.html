@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSC 433/533 - Computer Graphics</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="./CSC 433_533 - Computer Graphics_files/main.css">
+  <link rel="canonical" href="AlonEfrat.github.io/csc433-533/">
+  <link rel="alternate" type="application/rss+xml" title="Alon Efrat" href="AlonEfrat.github.iofeed.xml">
+</head>
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" href="AlonEfrat.github.io">Alon Efrat</a>
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"></path>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"></path>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"></path>
+        </svg>
+      </span>
+      <div class="trigger">
+         
+      </div>
+    </nav>
+  </div>
+</header>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">CSC 433/533 - Computer Graphics</h1>
+  </header>
+  <div class="post-content">
+<table>
+<tbody><tr>
+<td class="td_left2" style="width: 550px;">
+Instructor: Alon Efrat <br>
+Meets: TuThu 3:30-4:45. Online via Zoom <br>
+<br>
+<a href="AlonEfrat.github.iocsc433-533/syllabus.html">Course Syllabus</a><br>
+<a href="https://d2l.arizona.edu/d2l/home/825755">D2L (for 433)</a><br>
+<a href="https://d2l.arizona.edu/d2l/home/825758">D2L (for 533)</a><br>
+<a href="https://piazza.com/arizona/fall2019/csc433533/home">Piazza</a><br>
+<br>
+<br>
+<h4>Course Calendar</h4>
+<div><em>(tentative, subject to change)</em></div><br>
+<table>
+<tbody><tr>
+<td class="td_jusc">Week</td>
+<td class="td_jusr">Date</td>
+<td class="td_jusl">Monday</td>
+<td class="td_jusr">Date</td>
+<td class="td_jusl">Wednesday</td>
+</tr>
+<tr>
+<td class="td_jusc">1</td>
+<td class="td_jusr">Aug 25</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/08/26/L01.html">Introduction. </a></td>
+<td class="td_jusr">Aug 27</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/08/28/L02.html">Javascript Intro</a></td>
+</tr>
+<tr>
+<td class="td_jusc">2</td>
+<td class="td_jusr">Sep 01</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/09/04/L03.html">2D Transformation </a></td>
+<td class="td_jusr">Sep 03</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/09/04/L03.html">Raster Images</a></td>
+</tr>
+<tr>
+<td class="td_jusc">3</td>
+<td class="td_jusr my_highlight">Sep 08</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/09/09/L04.html">Color and Perception</a></td>
+<td class="td_jusr">Sep 11</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/09/11/L05.html">Signal Processing</a></td>
+</tr>
+<tr>
+<td class="td_jusc">4</td>
+<td class="td_jusr">Sep 18</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/09/16/L06.html">Tone Reproduction</a></td>
+<td class="td_jusr">Sep 18</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/09/18/L07.html">Image Compositing</a></td>
+</tr>
+<tr>
+<td class="td_jusc">5</td>
+<td class="td_jusr my_highlight2">Sep 23</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/09/23/L08.html">Chapter 2 Math + Coding</a></td>
+<td class="td_jusr my_highlight">Sep 25</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/09/25/L09.html">Ray Tracing 1</a></td>
+</tr>
+<tr>
+<td class="td_jusc">6</td>
+<td class="td_jusr">Sep 30</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/09/30/L10.html">Ray Tracing 2</a></td>
+<td class="td_jusr">Oct 02</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/02/L11.html">Ray Tracing 3</a></td>
+</tr>
+<tr>
+<td class="td_jusc">7</td>
+<td class="td_jusr">Oct 07</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/07/L12.html">Ray Tracing 4</a></td>
+<td class="td_jusr my_highlight">Oct 09</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/09/L13.html">Global Illumination</a></td>
+</tr>
+<tr>
+<td class="td_jusc">8</td>
+<td class="td_jusr">Oct 14</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/14/L14.html">Triangle Meshes</a></td>
+<td class="td_jusr">Oct 16</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/16/L15.html">Acceleration Structures</a></td>
+</tr>
+<tr>
+<td class="td_jusc">9</td>
+<td class="td_jusr">Oct 21</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/28/L17.html">Matrix Math + Coding</a></td>
+<td class="td_jusr">Oct 23</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/30/L18.html">Transformations</a></td>
+</tr>
+
+<tr>
+<td class="td_jusc">10</td>
+<td class="td_jusr">Oct 28</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/28/L17.html">Matrix Math + Coding</a></td>
+<td class="td_jusr my_highlight">Oct 30</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/30/L18.html">Transformations</a></td>
+</tr>
+<tr>
+	<td class="td_jusc">10</td>
+	<td class="td_jusr">Oct 28</td>
+	<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/28/L17.html">Matrix Math + Coding</a></td>
+	<td class="td_jusr my_highlight">Oct 30</td>
+	<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/30/L18.html">Transformations</a></td>
+	</tr>
+<tr>
+<td class="td_jusc">11</td>
+<td class="td_jusr my_highlight2">Nov 04</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/11/04/L19.html">Viewing</a></td>
+<td class="td_jusr">Nov 06</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/11/06/L20.html">Graphics Pipeline 1</a></td>
+</tr>
+<tr>
+<td class="td_jusc">12</td>
+<td class="td_jusr">Nov 11</td>
+<td class="td_jusl">-- Veterans Day --</td>
+<td class="td_jusr my_highlight">Nov 13</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/11/13/L21.html">Graphics Pipeline 2</a></td>
+</tr>
+<tr>
+<td class="td_jusc">13</td>
+<td class="td_jusr">Nov 18</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/11/18/L22.html">Textures</a></td>
+<td class="td_jusr">Nov 20</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/11/20/L23.html">Animation 1</a></td>
+</tr>
+<tr>
+<td class="td_jusc">14</td>
+<td class="td_jusr">Nov 25</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/11/25/L24.html">Animation 2</a></td>
+<td class="td_jusr my_highlight">Nov 27</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/11/27/L25.html">Animation 3</a></td>
+</tr>
+<tr>
+<td class="td_jusc">15</td>
+<td class="td_jusr">Dec 02</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/12/02/L26.html">Curves</a></td>
+<td class="td_jusr">Dec 04</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/12/04/L27.html">Curves/Surfaces</a></td>
+</tr>
+<tr>
+<td class="td_jusc">16</td>
+<td class="td_jusr">Dec 09</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/12/09/L28.html">Implicit Modeling</a></td>
+<td class="td_jusr my_highlight">Dec 11</td>
+<td class="td_jusl"><a href="AlonEfrat.github.io/csc433-533/lectures/2019/12/11/L29.html">Final Exam Review</a></td>
+</tr>
+</tbody></table>
+<br>
+<strong>Final Exam: Thur., Dec 19, 1-3pm, 906 Gould-Simpson</strong><br>
+<span class="my_highlight" style="padding:5px;">Highlighted</span> dates have a an assignment <strong>due</strong> by the start of class.<br>
+<span class="my_highlight2" style="padding:5px;">Boxed</span> dates correspond to the nearest class day to the deadlines for the dropping (without a W) and the withdraw deadlines for this semester.  See <a href="https://registrar.arizona.edu/dates-and-deadlines/view-dates?field_display_term_value=194">Fall 2019 Undergraduate Dates and Deadlines</a> and
+<a href="https://registrar.arizona.edu/dates-and-deadlines/view-dates-grad-students?field_display_term_value=194">Fall 2019 Graduate Dates and Deadlines</a> for complete details. <br>
+<br>
+<a href="https://drive.google.com/open?id=1-8_WJo4z5fzQ1qP_Fn6dNt1rLdHRYrgc">Link to Google drive folder with all lecture slides</a><br>
+<br>
+<br>
+<br>
+<!--
+<table>
+<tr>
+<td class="td_jusc">Week</td>
+<td class="td_jusr">Date</td>
+<td class="td_jusl">Monday</td>
+<td class="td_jusr">Date</td>
+<td class="td_jusl">Wednesday</td>
+</tr>
+<tr><td colspan="5" style="padding: 0px; margin: 0px; height: 0px; border-bottom: 2px solid black;"></td></tr>
+</table>
+-->
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/08/26/L01.html">Lecture 01</a> - Introduction. 2D transformations (<a href="https://drive.google.com/open?id=1xydmlAQs53WI41zGOOytPW0YvkbdqLk9">slides</a>) 
+		<p class="meta">Date: August 26, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li><a href="AlonEfrat.github.io/csc433-533/syllabus.html">Course Syllabus</a></li>
+<li>FOCG, Ch. 1 (note, available electronically through the <a href="https://ebookcentral.proquest.com/lib/UAZ/detail.action?docID=4710787">UA library</a>)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://graphics.cs.wisc.edu/WP/cs559-sp2019/javascript/">Javascript and CSC559</a> - Michael Gleicher (Wisconsin).  An interesting perspective on Javascript and Graphics, and some useful links to learning Javascript</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/08/28/L02.html">Lecture 02</a> - Javascript Intro (<a href="https://drive.google.com/file/d/1CrzPbHoSFlQltC_KdyNTbvIOyfTLHKTn/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: August 28, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li><a href="http://speakingjs.com/es5/ch01.html">Speaking JavaScript: An In-Depth Guide for Programmers - Chapter 1. Basic JavaScript</a> (note, most chapters of this book cover Javascript in great detail, but the focus of the book is ES5)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://eloquentjavascript.net/">Eloquent JavaScript, 3rd Edition: A Modern Introduction to Programming</a> (note, this is as a reference.  The book is a great way to learn ES6, but you need not read it all at once)</li>
+<li>Introductions to the <a href="https://cscheid.net/courses/fall-2019/csc444/lectures/lecture2.html">Web Stack</a>, <a href="https://cscheid.net/courses/fall-2019/csc444/lectures/lecture3.html">Javascript</a>, and <a href="https://cscheid.net/courses/fall-2019/csc444/lectures/lecture4.html">DOM Manipulation</a> - Carlos Scheidegger (Arizona).  These links cover the first few lectures of CSC 444.  Not all of the material is relevant to our course (you will not need any of the info about CSS or SVGs), but especially the Javascript lecture will provide you another opportunity for practice!  His <a href="https://cscheid.net/courses/fal18/csc444/quizzes/javascript.html">Quizzes</a> also are useful practice.</li>
+<li><a href="https://graphics.cs.wisc.edu/WP/cs559-sp2019/javascript/#Advice_on_Learning_JavaScript">Advice on Learning Javascript</a> - Michael Gleicher (Wisconsin).  Other than the textbook links, check out the video lectures at the bottom of this page for more repetition on the basics of the language, closures, and more</li>
+<li><a href="https://github.com/UA-CSC433-Fall2019/l02_examples">Example Code from Class</a> - use `git clone https://github.com/UA-CSC433-Fall2019/l02_examples` to download</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/09/04/L03.html">Lecture 03</a> - Raster Images (<a href="https://drive.google.com/file/d/1VkpVxJzmIZOmLnuxDusxpxzDkUHrP0Tm/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: September 04, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 3 (particularly 3.1-3.2)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://youtu.be/jiejNAUwcQ8">LCD Monitor Teardown (watch)</a> - Bill Hammack, The Engineer Guy</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/09/09/L04.html">Lecture 04</a> - Color and Perception (<a href="https://drive.google.com/file/d/1duedc2HB1k-VQvXSSSceK0kfVyj6LGrP/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: September 09, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 3.3</li>
+<li>FOCG, Ch. 19</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://www.radiolab.org/2012/may/21/">Color (listen)</a> - Radiolab</li>
+<li><a href="http://www.stonesc.com/pubs/Stone%20CGA%2007-2005.pdf"> Representing Colors as Three Numbers.</a> Maureen Stone, Computer Graphics and Applications, 25(4), July 2005, pp. 78-85.</li>
+<li><a href="http://brucelindbloom.com/"> http://www.brucelindbloom.com</a> Bruce Lindbloom. Useful color information, studies, and Files.</li>
+<li><a href="http://youtu.be/evQsOFQju08">Is Your Red The Same as My Red? (watch)</a> - Vsauce.</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/09/11/L05.html">Lecture 05</a> - Signal Processing (<a href="https://drive.google.com/file/d/1CmOcHDJTA--LlwEESW21M3i8ossWtv6T/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: September 11, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 9 (particularly 9.1-9.2, 533 students should also look at 9.3-9.4)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&amp;arnumber=1510545">What Is a Pixel?</a> - James F. Blinn. IEEE Computer Graphics and Applications 25(5): 82-87, 2005.</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/09/16/L06.html">Lecture 06</a> - Tone Reproduction (<a href="https://drive.google.com/file/d/1zwplxuaswv0J2LISsZMine4_jJKrySek/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: September 16, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 21 (particularly 21.1-21.3)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://people.csail.mit.edu/fredo/PUBLI/Siggraph2002/">Fast Bilateral Filtering for the Display of High-Dynamic-Range Images</a> - Frédo Durand and Julie Dorsey.  SIGGRAPH 2002.</li>
+<li><a href="http://www.pauldebevec.com/Research/HDR/">Recovering High Dynamic Range Radiance Maps from Photographs</a> - Paul Debevec, Jitendra Malik. SIGGRAPH 1998.</li>
+<li><a href="http://www.cs.utah.edu/~reinhard/cdrom/">Photographic Tone Reproduction for Digital Images</a> - Erik Reinhard, Mike Stark, Peter Shirley and Jim Ferwerda.  SIGGRAPH 2002.</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/09/18/L07.html">Lecture 07</a> - Image Compositing (<a href="https://drive.google.com/file/d/1neKF_d7NrbCaJr4Do2ej_sEmwyp1Hb6e/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: September 18, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 3.4</li>
+<li>FOCG, Ch. 20.1-20.2</li>
+<li><a href="http://dl.acm.org/citation.cfm?id=808606">Compositing Digital Images</a>. Thomas Porter and Tom Duff, SIGGRAPH Comput. Graph. 18(3): 253-259, 1984.</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://dl.acm.org/citation.cfm?id=237263">Blue screen matting</a>. Alvy Ray Smith and James F. Blinn, SIGGRAPH, 259-268, 1996.</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/09/23/L08.html">Lecture 08</a> - Chapter 2 Math + Coding (<a href="https://drive.google.com/file/d/1DRJkuhmAm1e3EJm11BsTNwuFhORDAHww/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: September 23, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 2 (particularly 2.1-2.4)</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://github.com/UA-CSC433-Fall2019/l08_examples">Example Code from Class</a> - use `git clone https://github.com/UA-CSC433-Fall2019/l08_examples` to download</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/09/25/L09.html">Lecture 09</a> - Ray Tracing 1 (<a href="https://drive.google.com/open?id=1KuSuJxDSQ62V9OlPQL6V7W0hwUZ-trKk">slides</a>) 
+		<p class="meta">Date: September 25, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 4.1-4.4</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/09/30/L10.html">Lecture 10</a> - Ray Tracing 2 (<a href="https://drive.google.com/open?id=1MrCc6wqX0RCEP4I0tyiJEGcWhz04-LrE">slides</a>) 
+		<p class="meta">Date: September 30, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 4.5-4.9</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/02/L11.html">Lecture 11</a> - Ray Tracing 3 (<a href="https://drive.google.com/open?id=1P3gsSzuYWTmZt2CoMZiLy6GlSF8c2lnc">slides</a>) 
+		<p class="meta">Date: October 02, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 4 (all), 10</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/07/L12.html">Lecture 12</a> - Ray Tracing 4 (<a href="https://drive.google.com/file/d/1kSMvc7L6vVdWphNhw747oMsPvxoI9u3C/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: October 07, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 13</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://dl.acm.org/citation.cfm?id=808590">Distributed Ray Tracing</a> - Robert L. Cook, Thomas Porter, Loren Carpenter. SIGGRAPH 1984.</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/09/L13.html">Lecture 13</a> - Global Illumination (<a href="https://drive.google.com/file/d/1hTSQ7wt1_ow8ZIroEN0XRgWoyVZC8Itb/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: October 09, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 23</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://graphics.ucsd.edu/~henrik/papers/photon_map/">Global Illumination using Photon Maps</a> - Henrik Wann Jensen.   In Rendering Techniques, pp. 21-30, 1996</li>
+<li><a href="http://graphics.stanford.edu/papers/metro/">Metropolis Light Transport</a> - Eric Veach and Leonidas J. Guibas, SIGGRAPH 97</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/14/L14.html">Lecture 14</a> - Triangle Meshes (<a href="https://drive.google.com/open?id=1t6KIdcKfOWva-OsGlJQP1cQmUSfo7epy">slides</a>) 
+		<p class="meta">Date: October 14, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 12.1</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/16/L15.html">Lecture 15</a> - Acceleration Structures (<a href="https://drive.google.com/open?id=1jsoSznE8882eooWGAmtDD45qtuW0mGSj">slides</a>) 
+		<p class="meta">Date: October 16, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 12.3</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/21/L16.html">Lecture 16</a> - Midterm Exam
+		<p class="meta">Date: October 21, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>Please see the <a href="AlonEfrat.github.io/csc433-533/COURSE_DIR/lectures/2019/10/14/L14.html">slides from L14</a> for a brief review of all material the midterm exam will cover.</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/28/L17.html">Lecture 17</a> - Matrix Math + Coding (<a href="https://drive.google.com/open?id=1a7-Kpb5ziZE2XB52sWMKf27Dg-ZoJlqe">slides</a>) 
+		<p class="meta">Date: October 28, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 5</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://github.com/UA-CSC433-Fall2019/l17_examples">Example Code from Class</a> - use `git clone https://github.com/UA-CSC433-Fall2019/l17_examples` to download</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/10/30/L18.html">Lecture 18</a> - Transformations (<a href="https://drive.google.com/open?id=1F4fQJKg4iX5egPeMDJRJDeEdhvhKP6W9">slides</a>) 
+		<p class="meta">Date: October 30, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 6</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/11/04/L19.html">Lecture 19</a> - Viewing (<a href="https://drive.google.com/file/d/1Bck06H_AyLCuc1ry8Gmfmb74TiIMu-by/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: November 04, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 7</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="http://www.cs.cornell.edu/courses/cs4620/2019fa/demos/view_explore/view_explore.html">CS4620 View Explorer</a> - Steve Marschner (Cornell)</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/11/06/L20.html">Lecture 20</a> - Graphics Pipeline 1 (<a href="https://drive.google.com/file/d/1A1FLcvKmpD23kd_BFDy9NcQ40Ks8jOni/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: November 06, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 8.1</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/11/13/L21.html">Lecture 21</a> - Graphics Pipeline 2 (<a href="https://drive.google.com/file/d/1ogqqazxVJ37ZRdvIjz7JG7Nn-x-h-oRd/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: November 13, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 8.2</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/11/18/L22.html">Lecture 22</a> - Textures (<a href="https://drive.google.com/file/d/1X615Ic847Zdyb0LXEPQayHVcFLZE5Zyl/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: November 18, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 11.1-11.4</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/11/20/L23.html">Lecture 23</a> - Animation 1 (<a href="https://drive.google.com/file/d/1JB4hMzNR4TJ6pkq0pr734gGhxHJMnTs9/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: November 20, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 16.1-16.2,16.4</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://dl.acm.org/citation.cfm?id=37407">Principles of traditional animation applied to 3D computer animation</a> - John Lasseter, SIGGRAPH, 35-44, 1987</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/11/25/L24.html">Lecture 24</a> - Animation 2 (<a href="https://drive.google.com/file/d/1ZA2pqkY-QHqvmE7jw1cfK5R_Ngn1Ma4-/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: November 25, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 16.3,16.5</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://www.cs.cmu.edu/~baraff/sigcourse/">Physically Based Modeling: Principles and Practice</a> - Andrew Witkin, David Baraff.  SIGGRAPH course, 1997.</li>
+<li><a href="http://graphics.cs.cmu.edu/projects/sma/">Skinning Mesh Animations</a> - Doug L. James, Christopher D. Twigg.  SIGGRAPH 2005.</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/11/27/L25.html">Lecture 25</a> - Animation 3 (<a href="https://drive.google.com/file/d/1xtE2nlnP-1ZsqF3X_hJP3dNAWgcrz-Nn/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: November 27, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 16.6-16.7</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://www.cs.cmu.edu/~baraff/papers/sig98.pdf">Large Steps in Cloth Simulation</a> - David Baraff, Andrew Witkin.  SIGGRAPH 1998.</li>
+<li><a href="http://www.red3d.com/cwr/papers/1987/boids.html">Flocks, Herds, and Schools: A Distributed Behavioral Model</a> - Craig W. Reynolds, SIGGRAPH 1987.</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/12/02/L26.html">Lecture 26</a> - Curves (<a href="https://drive.google.com/file/d/1I0XZStDoVDODFDOssDdsQKxnf2eEeUaJ/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: December 02, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 15</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/12/04/L27.html">Lecture 27</a> - Curves/Surfaces (<a href="https://drive.google.com/file/d/1KGnrNJtEIDqEl7gdsMzS5EycTHASz8FE/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: December 04, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 15</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://www.sciencedirect.com/science/article/pii/0010448578901100">Recursively generated B-spline surfaces on arbitrary topological meshes</a> - Edward Catmull and Jim Clark. Computer-Aided Design 10(6): 350-355, 1978.</li>
+</ul>
+		</div>
+	</div>
+  <br>
+  <div class="div_left">
+		<a href="AlonEfrat.github.io/csc433-533/lectures/2019/12/09/L28.html">Lecture 28</a> - Implicit Modeling (<a href="https://drive.google.com/file/d/1B8zKXXUztXYCwRdCtChgYzrEDMWu6SvR/view?usp=sharing">slides</a>) 
+		<p class="meta">Date: December 09, 2019</p>
+		<div class="entry">
+			Required Reading: 
+<ul>
+<li>FOCG, Ch. 22</li>
+</ul>
+			Optional Reading: 
+<ul>
+<li><a href="https://dl.acm.org/citation.cfm?id=357310">A Generalization of Algebraic Surface Drawing</a> - James F. Blinn.  ACM Transactions on Graphics (TOG), 1(3), 235-256, 1982.</li>
+<li><a href="https://dl.acm.org/citation.cfm?id=74364">Guaranteed ray intersections with implicit surfaces</a> - Devendra Kalra and Alan H. Barr. SIGGRAPH 1989.</li>
+</ul>
+		</div>
+	</div>
+  <br>
+</td>
+<td class="td_right" style="width: 250px;">
+<!--
+<p class="div_right">
+</p >
+<br /><br />
+-->
+<p class="div_right">
+<a href="AlonEfrat.github.io/csc433-533/assignments/2019/08/28/A01.html">Assignment 01</a>
+- Image Basics<br>
+&nbsp; Assigned: Aug 28<br>
+&nbsp; Written: Sep 09 04:59:59 PM<br>
+&nbsp; Due: Sep 11 04:59:59 PM<br>
+&nbsp; Graded: Sep 18<br>
+</p>
+<p class="div_right">
+<a href="AlonEfrat.github.io/csc433-533/assignments/2019/09/11/A02.html">Assignment 02</a>
+- Images<br>
+&nbsp; Assigned: Sep 11<br>
+&nbsp; Written: Sep 23 04:59:59 PM<br>
+&nbsp; Due: Sep 25 04:59:59 PM<br>
+&nbsp; Graded: Oct 02<br>
+</p>
+<p class="div_right">
+<a href="AlonEfrat.github.io/csc433-533/assignments/2019/09/25/A03.html">Assignment 03</a>
+- Scaffolding<br>
+&nbsp; Assigned: Sep 25<br>
+&nbsp; Written: Oct 07 04:59:59 PM<br>
+&nbsp; Due: Oct 09 04:59:59 PM<br>
+&nbsp; Graded: Oct 16<br>
+</p>
+<p class="div_right">
+<a href="AlonEfrat.github.io/csc433-533/assignments/2019/10/09/A04.html">Assignment 04</a>
+- Ray Tracing<br>
+&nbsp; Assigned: Oct 09<br>
+&nbsp; Written: Oct 28 04:59:59 PM<br>
+&nbsp; Due: Oct 30 04:59:59 PM<br>
+&nbsp; Graded: Nov 06<br>
+</p>
+<p class="div_right">
+<a href="AlonEfrat.github.io/csc433-533/assignments/2019/10/30/A05.html">Assignment 05</a>
+- Shapes<br>
+&nbsp; Assigned: Oct 30<br>
+&nbsp; Written: Nov 12 04:59:59 PM<br>
+&nbsp; Due: Nov 13 04:59:59 PM<br>
+&nbsp; Graded: Nov 20<br>
+</p>
+<p class="div_right">
+<a href="AlonEfrat.github.io/csc433-533/assignments/2019/11/13/A06.html">Assignment 06</a>
+- Rasterizer<br>
+&nbsp; Assigned: Nov 13<br>
+&nbsp; Written: Nov 25 04:59:59 PM<br>
+&nbsp; Due: Nov 27 04:59:59 PM<br>
+&nbsp; Graded: Dec 04<br>
+</p>
+<p class="div_right">
+<a href="AlonEfrat.github.io/csc433-533/assignments/2019/11/27/A07.html">Assignment 07</a>
+- Animation<br>
+&nbsp; Assigned: Nov 27<br>
+&nbsp; Written: Dec 09 04:59:59 PM<br>
+&nbsp; Due: Dec 11 04:59:59 PM<br>
+&nbsp; Graded: Dec 18<br>
+</p>
+</td>
+</tr>
+</tbody></table>
+  </div>
+</article>
+      </div>
+    </main>
+    <footer class="site-footer">
+  <div class="wrapper">
+    <h2 class="footer-heading">Contact:</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+         <a href="http://www.cs.arizona.edu/">Department of Computer Science</a><br>
+         <a href="http://www.arizona.edu/">University of Arizona</a><br>
+         754 Gould-Simpson<br>
+         1040 E. 4th Street<br>
+         Tucson, AZ 85721, USA<br>
+         Phone: +1-520-621-3153<br>
+         <br>
+         Email: [username]@email.arizona.edu, my username is josh.<br>
+         <br>
+         Last Updated: 2020-06-09 17:37:11 -0700
+      </div>
+    </div>
+  </div>
+</footer>
+  
+
+</body></html>

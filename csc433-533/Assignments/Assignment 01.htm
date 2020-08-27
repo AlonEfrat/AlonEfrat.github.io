@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://jalevine.bitbucket.io/csc433-533/assignments/2019/08/28/A01.html -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment 01</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="./Assignment 01_files/main.css">
+  <script src="./Assignment 01_files/MathJax.js" id=""></script>
+  <style type="text/css">
+    .MathJax_Hover_Frame {
+      border-radius: .25em;
+      -webkit-border-radius: .25em;
+      -moz-border-radius: .25em;
+      -khtml-border-radius: .25em;
+      box-shadow: 0px 0px 15px #83A;
+      -webkit-box-shadow: 0px 0px 15px #83A;
+      -moz-box-shadow: 0px 0px 15px #83A;
+      -khtml-box-shadow: 0px 0px 15px #83A;
+      border: 1px solid #A6D ! important;
+      display: inline-block;
+      position: absolute
+    }
+
+    .MathJax_Menu_Button .MathJax_Hover_Arrow {
+      position: absolute;
+      cursor: pointer;
+      display: inline-block;
+      border: 2px solid #AAA;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -khtml-border-radius: 4px;
+      font-family: 'Courier New', Courier;
+      font-size: 9px;
+      color: #F0F0F0
+    }
+
+    .MathJax_Menu_Button .MathJax_Hover_Arrow span {
+      display: block;
+      background-color: #AAA;
+      border: 1px solid;
+      border-radius: 3px;
+      line-height: 0;
+      padding: 4px
+    }
+
+    .MathJax_Hover_Arrow:hover {
+      color: white !important;
+      border: 2px solid #CCC !important
+    }
+
+    .MathJax_Hover_Arrow:hover span {
+      background-color: #CCC !important
+    }
+  </style>
+  <style type="text/css">
+    #MathJax_About {
+      position: fixed;
+      left: 50%;
+      width: auto;
+      text-align: center;
+      border: 3px outset;
+      padding: 1em 2em;
+      background-color: #DDDDDD;
+      color: black;
+      cursor: default;
+      font-family: message-box;
+      font-size: 120%;
+      font-style: normal;
+      text-indent: 0;
+      text-transform: none;
+      line-height: normal;
+      letter-spacing: normal;
+      word-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      float: none;
+      z-index: 201;
+      border-radius: 15px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      -khtml-border-radius: 15px;
+      box-shadow: 0px 10px 20px #808080;
+      -webkit-box-shadow: 0px 10px 20px #808080;
+      -moz-box-shadow: 0px 10px 20px #808080;
+      -khtml-box-shadow: 0px 10px 20px #808080;
+      filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+    }
+
+    #MathJax_About.MathJax_MousePost {
+      outline: none
+    }
+
+    .MathJax_Menu {
+      position: absolute;
+      background-color: white;
+      color: black;
+      width: auto;
+      padding: 5px 0px;
+      border: 1px solid #CCCCCC;
+      margin: 0;
+      cursor: default;
+      font: menu;
+      text-align: left;
+      text-indent: 0;
+      text-transform: none;
+      line-height: normal;
+      letter-spacing: normal;
+      word-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      float: none;
+      z-index: 201;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -khtml-border-radius: 5px;
+      box-shadow: 0px 10px 20px #808080;
+      -webkit-box-shadow: 0px 10px 20px #808080;
+      -moz-box-shadow: 0px 10px 20px #808080;
+      -khtml-box-shadow: 0px 10px 20px #808080;
+      filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+    }
+
+    .MathJax_MenuItem {
+      padding: 1px 2em;
+      background: transparent
+    }
+
+    .MathJax_MenuArrow {
+      position: absolute;
+      right: .5em;
+      padding-top: .25em;
+      color: #666666;
+      font-size: .75em
+    }
+
+    .MathJax_MenuActive .MathJax_MenuArrow {
+      color: white
+    }
+
+    .MathJax_MenuArrow.RTL {
+      left: .5em;
+      right: auto
+    }
+
+    .MathJax_MenuCheck {
+      position: absolute;
+      left: .7em
+    }
+
+    .MathJax_MenuCheck.RTL {
+      right: .7em;
+      left: auto
+    }
+
+    .MathJax_MenuRadioCheck {
+      position: absolute;
+      left: .7em
+    }
+
+    .MathJax_MenuRadioCheck.RTL {
+      right: .7em;
+      left: auto
+    }
+
+    .MathJax_MenuLabel {
+      padding: 1px 2em 3px 1.33em;
+      font-style: italic
+    }
+
+    .MathJax_MenuRule {
+      border-top: 1px solid #DDDDDD;
+      margin: 4px 3px
+    }
+
+    .MathJax_MenuDisabled {
+      color: GrayText
+    }
+
+    .MathJax_MenuActive {
+      background-color: #606872;
+      color: white
+    }
+
+    .MathJax_MenuDisabled:focus,
+    .MathJax_MenuLabel:focus {
+      background-color: #E8E8E8
+    }
+
+    .MathJax_ContextMenu:focus {
+      outline: none
+    }
+
+    .MathJax_ContextMenu .MathJax_MenuItem:focus {
+      outline: none
+    }
+
+    #MathJax_AboutClose {
+      top: .2em;
+      right: .2em
+    }
+
+    .MathJax_Menu .MathJax_MenuClose {
+      top: -10px;
+      left: -10px
+    }
+
+    .MathJax_MenuClose {
+      position: absolute;
+      cursor: pointer;
+      display: inline-block;
+      border: 2px solid #AAA;
+      border-radius: 18px;
+      -webkit-border-radius: 18px;
+      -moz-border-radius: 18px;
+      -khtml-border-radius: 18px;
+      font-family: 'Courier New', Courier;
+      font-size: 24px;
+      color: #F0F0F0
+    }
+
+    .MathJax_MenuClose span {
+      display: block;
+      background-color: #AAA;
+      border: 1.5px solid;
+      border-radius: 18px;
+      -webkit-border-radius: 18px;
+      -moz-border-radius: 18px;
+      -khtml-border-radius: 18px;
+      line-height: 0;
+      padding: 8px 0 6px
+    }
+
+    .MathJax_MenuClose:hover {
+      color: white !important;
+      border: 2px solid #CCC !important
+    }
+
+    .MathJax_MenuClose:hover span {
+      background-color: #CCC !important
+    }
+
+    .MathJax_MenuClose:hover:focus {
+      outline: none
+    }
+  </style>
+  <style type="text/css">
+    .MathJax_Preview .MJXf-math {
+      color: inherit !important
+    }
+  </style>
+  <style type="text/css">
+    .MJX_Assistive_MathML {
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      clip: rect(1px, 1px, 1px, 1px);
+      padding: 1px 0 0 0 !important;
+      border: 0 !important;
+      height: 1px !important;
+      width: 1px !important;
+      overflow: hidden !important;
+      display: block !important;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none
+    }
+
+    .MJX_Assistive_MathML.MJX_Assistive_MathML_Block {
+      width: 100% !important
+    }
+  </style>
+  <style type="text/css">
+    #MathJax_Zoom {
+      position: absolute;
+      background-color: #F0F0F0;
+      overflow: auto;
+      display: block;
+      z-index: 301;
+      padding: .5em;
+      border: 1px solid black;
+      margin: 0;
+      font-weight: normal;
+      font-style: normal;
+      text-align: left;
+      text-indent: 0;
+      text-transform: none;
+      line-height: normal;
+      letter-spacing: normal;
+      word-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      float: none;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+      box-shadow: 5px 5px 15px #AAAAAA;
+      -webkit-box-shadow: 5px 5px 15px #AAAAAA;
+      -moz-box-shadow: 5px 5px 15px #AAAAAA;
+      -khtml-box-shadow: 5px 5px 15px #AAAAAA;
+      filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+    }
+
+    #MathJax_ZoomOverlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 300;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      background-color: white;
+      opacity: 0;
+      filter: alpha(opacity=0)
+    }
+
+    #MathJax_ZoomFrame {
+      position: relative;
+      display: inline-block;
+      height: 0;
+      width: 0
+    }
+
+    #MathJax_ZoomEventTrap {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 302;
+      display: inline-block;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      background-color: white;
+      opacity: 0;
+      filter: alpha(opacity=0)
+    }
+  </style>
+  <style type="text/css">
+    .MathJax_Preview {
+      color: #888
+    }
+
+    #MathJax_Message {
+      position: fixed;
+      left: 1em;
+      bottom: 1.5em;
+      background-color: #E6E6E6;
+      border: 1px solid #959595;
+      margin: 0px;
+      padding: 2px 8px;
+      z-index: 102;
+      color: black;
+      font-size: 80%;
+      width: auto;
+      white-space: nowrap
+    }
+
+    #MathJax_MSIE_Frame {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0px;
+      z-index: 101;
+      border: 0px;
+      margin: 0px;
+      padding: 0px
+    }
+
+    .MathJax_Error {
+      color: #CC0000;
+      font-style: italic
+    }
+  </style>
+  <style type="text/css">
+    .MJXp-script {
+      font-size: .8em
+    }
+
+    .MJXp-right {
+      -webkit-transform-origin: right;
+      -moz-transform-origin: right;
+      -ms-transform-origin: right;
+      -o-transform-origin: right;
+      transform-origin: right
+    }
+
+    .MJXp-bold {
+      font-weight: bold
+    }
+
+    .MJXp-italic {
+      font-style: italic
+    }
+
+    .MJXp-scr {
+      font-family: MathJax_Script, 'Times New Roman', Times, STIXGeneral, serif
+    }
+
+    .MJXp-frak {
+      font-family: MathJax_Fraktur, 'Times New Roman', Times, STIXGeneral, serif
+    }
+
+    .MJXp-sf {
+      font-family: MathJax_SansSerif, 'Times New Roman', Times, STIXGeneral, serif
+    }
+
+    .MJXp-cal {
+      font-family: MathJax_Caligraphic, 'Times New Roman', Times, STIXGeneral, serif
+    }
+
+    .MJXp-mono {
+      font-family: MathJax_Typewriter, 'Times New Roman', Times, STIXGeneral, serif
+    }
+
+    .MJXp-largeop {
+      font-size: 150%
+    }
+
+    .MJXp-largeop.MJXp-int {
+      vertical-align: -.2em
+    }
+
+    .MJXp-math {
+      display: inline-block;
+      line-height: 1.2;
+      text-indent: 0;
+      font-family: 'Times New Roman', Times, STIXGeneral, serif;
+      white-space: nowrap;
+      border-collapse: collapse
+    }
+
+    .MJXp-display {
+      display: block;
+      text-align: center;
+      margin: 1em 0
+    }
+
+    .MJXp-math span {
+      display: inline-block
+    }
+
+    .MJXp-box {
+      display: block !important;
+      text-align: center
+    }
+
+    .MJXp-box:after {
+      content: " "
+    }
+
+    .MJXp-rule {
+      display: block !important;
+      margin-top: .1em
+    }
+
+    .MJXp-char {
+      display: block !important
+    }
+
+    .MJXp-mo {
+      margin: 0 .15em
+    }
+
+    .MJXp-mfrac {
+      margin: 0 .125em;
+      vertical-align: .25em
+    }
+
+    .MJXp-denom {
+      display: inline-table !important;
+      width: 100%
+    }
+
+    .MJXp-denom>* {
+      display: table-row !important
+    }
+
+    .MJXp-surd {
+      vertical-align: top
+    }
+
+    .MJXp-surd>* {
+      display: block !important
+    }
+
+    .MJXp-script-box>* {
+      display: table !important;
+      height: 50%
+    }
+
+    .MJXp-script-box>*>* {
+      display: table-cell !important;
+      vertical-align: top
+    }
+
+    .MJXp-script-box>*:last-child>* {
+      vertical-align: bottom
+    }
+
+    .MJXp-script-box>*>*>* {
+      display: block !important
+    }
+
+    .MJXp-mphantom {
+      visibility: hidden
+    }
+
+    .MJXp-munderover {
+      display: inline-table !important
+    }
+
+    .MJXp-over {
+      display: inline-block !important;
+      text-align: center
+    }
+
+    .MJXp-over>* {
+      display: block !important
+    }
+
+    .MJXp-munderover>* {
+      display: table-row !important
+    }
+
+    .MJXp-mtable {
+      vertical-align: .25em;
+      margin: 0 .125em
+    }
+
+    .MJXp-mtable>* {
+      display: inline-table !important;
+      vertical-align: middle
+    }
+
+    .MJXp-mtr {
+      display: table-row !important
+    }
+
+    .MJXp-mtd {
+      display: table-cell !important;
+      text-align: center;
+      padding: .5em 0 0 .5em
+    }
+
+    .MJXp-mtr>.MJXp-mtd:first-child {
+      padding-left: 0
+    }
+
+    .MJXp-mtr:first-child>.MJXp-mtd {
+      padding-top: 0
+    }
+
+    .MJXp-mlabeledtr {
+      display: table-row !important
+    }
+
+    .MJXp-mlabeledtr>.MJXp-mtd:first-child {
+      padding-left: 0
+    }
+
+    .MJXp-mlabeledtr:first-child>.MJXp-mtd {
+      padding-top: 0
+    }
+
+    .MJXp-merror {
+      background-color: #FFFF88;
+      color: #CC0000;
+      border: 1px solid #CC0000;
+      padding: 1px 3px;
+      font-style: normal;
+      font-size: 90%
+    }
+
+    .MJXp-scale0 {
+      -webkit-transform: scaleX(.0);
+      -moz-transform: scaleX(.0);
+      -ms-transform: scaleX(.0);
+      -o-transform: scaleX(.0);
+      transform: scaleX(.0)
+    }
+
+    .MJXp-scale1 {
+      -webkit-transform: scaleX(.1);
+      -moz-transform: scaleX(.1);
+      -ms-transform: scaleX(.1);
+      -o-transform: scaleX(.1);
+      transform: scaleX(.1)
+    }
+
+    .MJXp-scale2 {
+      -webkit-transform: scaleX(.2);
+      -moz-transform: scaleX(.2);
+      -ms-transform: scaleX(.2);
+      -o-transform: scaleX(.2);
+      transform: scaleX(.2)
+    }
+
+    .MJXp-scale3 {
+      -webkit-transform: scaleX(.3);
+      -moz-transform: scaleX(.3);
+      -ms-transform: scaleX(.3);
+      -o-transform: scaleX(.3);
+      transform: scaleX(.3)
+    }
+
+    .MJXp-scale4 {
+      -webkit-transform: scaleX(.4);
+      -moz-transform: scaleX(.4);
+      -ms-transform: scaleX(.4);
+      -o-transform: scaleX(.4);
+      transform: scaleX(.4)
+    }
+
+    .MJXp-scale5 {
+      -webkit-transform: scaleX(.5);
+      -moz-transform: scaleX(.5);
+      -ms-transform: scaleX(.5);
+      -o-transform: scaleX(.5);
+      transform: scaleX(.5)
+    }
+
+    .MJXp-scale6 {
+      -webkit-transform: scaleX(.6);
+      -moz-transform: scaleX(.6);
+      -ms-transform: scaleX(.6);
+      -o-transform: scaleX(.6);
+      transform: scaleX(.6)
+    }
+
+    .MJXp-scale7 {
+      -webkit-transform: scaleX(.7);
+      -moz-transform: scaleX(.7);
+      -ms-transform: scaleX(.7);
+      -o-transform: scaleX(.7);
+      transform: scaleX(.7)
+    }
+
+    .MJXp-scale8 {
+      -webkit-transform: scaleX(.8);
+      -moz-transform: scaleX(.8);
+      -ms-transform: scaleX(.8);
+      -o-transform: scaleX(.8);
+      transform: scaleX(.8)
+    }
+
+    .MJXp-scale9 {
+      -webkit-transform: scaleX(.9);
+      -moz-transform: scaleX(.9);
+      -ms-transform: scaleX(.9);
+      -o-transform: scaleX(.9);
+      transform: scaleX(.9)
+    }
+
+    .MathJax_PHTML .noError {
+      vertical-align: ;
+      font-size: 90%;
+      text-align: left;
+      color: black;
+      padding: 1px 3px;
+      border: 1px solid
+    }
+  </style>
+  <style type="text/css">
+    .mjx-chtml {
+      display: inline-block;
+      line-height: 0;
+      text-indent: 0;
+      text-align: left;
+      text-transform: none;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 100%;
+      font-size-adjust: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      word-spacing: normal;
+      white-space: nowrap;
+      float: none;
+      direction: ltr;
+      max-width: none;
+      max-height: none;
+      min-width: 0;
+      min-height: 0;
+      border: 0;
+      margin: 0;
+      padding: 1px 0
+    }
+
+    .MJXc-display {
+      display: block;
+      text-align: center;
+      margin: 1em 0;
+      padding: 0
+    }
+
+    .mjx-chtml[tabindex]:focus,
+    body :focus .mjx-chtml[tabindex] {
+      display: inline-table
+    }
+
+    .mjx-full-width {
+      text-align: center;
+      display: table-cell !important;
+      width: 10000em
+    }
+
+    .mjx-math {
+      display: inline-block;
+      border-collapse: separate;
+      border-spacing: 0
+    }
+
+    .mjx-math * {
+      display: inline-block;
+      -webkit-box-sizing: content-box !important;
+      -moz-box-sizing: content-box !important;
+      box-sizing: content-box !important;
+      text-align: left
+    }
+
+    .mjx-numerator {
+      display: block;
+      text-align: center
+    }
+
+    .mjx-denominator {
+      display: block;
+      text-align: center
+    }
+
+    .MJXc-stacked {
+      height: 0;
+      position: relative
+    }
+
+    .MJXc-stacked>* {
+      position: absolute
+    }
+
+    .MJXc-bevelled>* {
+      display: inline-block
+    }
+
+    .mjx-stack {
+      display: inline-block
+    }
+
+    .mjx-op {
+      display: block
+    }
+
+    .mjx-under {
+      display: table-cell
+    }
+
+    .mjx-over {
+      display: block
+    }
+
+    .mjx-over>* {
+      padding-left: 0px !important;
+      padding-right: 0px !important
+    }
+
+    .mjx-under>* {
+      padding-left: 0px !important;
+      padding-right: 0px !important
+    }
+
+    .mjx-stack>.mjx-sup {
+      display: block
+    }
+
+    .mjx-stack>.mjx-sub {
+      display: block
+    }
+
+    .mjx-prestack>.mjx-presup {
+      display: block
+    }
+
+    .mjx-prestack>.mjx-presub {
+      display: block
+    }
+
+    .mjx-delim-h>.mjx-char {
+      display: inline-block
+    }
+
+    .mjx-surd {
+      vertical-align: top
+    }
+
+    .mjx-mphantom * {
+      visibility: hidden
+    }
+
+    .mjx-merror {
+      background-color: #FFFF88;
+      color: #CC0000;
+      border: 1px solid #CC0000;
+      padding: 2px 3px;
+      font-style: normal;
+      font-size: 90%
+    }
+
+    .mjx-annotation-xml {
+      line-height: normal
+    }
+
+    .mjx-menclose>svg {
+      fill: none;
+      stroke: currentColor
+    }
+
+    .mjx-mtr {
+      display: table-row
+    }
+
+    .mjx-mlabeledtr {
+      display: table-row
+    }
+
+    .mjx-mtd {
+      display: table-cell;
+      text-align: center
+    }
+
+    .mjx-label {
+      display: table-row
+    }
+
+    .mjx-box {
+      display: inline-block
+    }
+
+    .mjx-block {
+      display: block
+    }
+
+    .mjx-span {
+      display: inline
+    }
+
+    .mjx-char {
+      display: block;
+      white-space: pre
+    }
+
+    .mjx-itable {
+      display: inline-table;
+      width: auto
+    }
+
+    .mjx-row {
+      display: table-row
+    }
+
+    .mjx-cell {
+      display: table-cell
+    }
+
+    .mjx-table {
+      display: table;
+      width: 100%
+    }
+
+    .mjx-line {
+      display: block;
+      height: 0
+    }
+
+    .mjx-strut {
+      width: 0;
+      padding-top: 1em
+    }
+
+    .mjx-vsize {
+      width: 0
+    }
+
+    .MJXc-space1 {
+      margin-left: .167em
+    }
+
+    .MJXc-space2 {
+      margin-left: .222em
+    }
+
+    .MJXc-space3 {
+      margin-left: .278em
+    }
+
+    .mjx-chartest {
+      display: block;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      line-height: normal;
+      font-size: 500%
+    }
+
+    .mjx-chartest .mjx-char {
+      display: inline
+    }
+
+    .mjx-chartest .mjx-box {
+      padding-top: 1000px
+    }
+
+    .MJXc-processing {
+      visibility: hidden;
+      position: fixed;
+      width: 0;
+      height: 0;
+      overflow: hidden
+    }
+
+    .MJXc-processed {
+      display: none
+    }
+
+    .mjx-test {
+      display: block;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 100%;
+      font-size-adjust: none;
+      text-indent: 0;
+      text-transform: none;
+      letter-spacing: normal;
+      word-spacing: normal;
+      overflow: hidden;
+      height: 1px
+    }
+
+    .mjx-ex-box-test {
+      position: absolute;
+      width: 1px;
+      height: 60ex
+    }
+
+    .mjx-line-box-test {
+      display: table !important
+    }
+
+    .mjx-line-box-test span {
+      display: table-cell !important;
+      width: 10000em !important;
+      min-width: 0;
+      max-width: none;
+      padding: 0;
+      border: 0;
+      margin: 0
+    }
+
+    #MathJax_CHTML_Tooltip {
+      background-color: InfoBackground;
+      color: InfoText;
+      border: 1px solid black;
+      box-shadow: 2px 2px 5px #AAAAAA;
+      -webkit-box-shadow: 2px 2px 5px #AAAAAA;
+      -moz-box-shadow: 2px 2px 5px #AAAAAA;
+      -khtml-box-shadow: 2px 2px 5px #AAAAAA;
+      padding: 3px 4px;
+      z-index: 401;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: auto;
+      height: auto;
+      display: none
+    }
+
+    .mjx-chtml .mjx-noError {
+      line-height: 1.2;
+      vertical-align: ;
+      font-size: 90%;
+      text-align: left;
+      color: black;
+      padding: 1px 3px;
+      border: 1px solid
+    }
+
+    .MJXc-TeX-unknown-R {
+      font-family: STIXGeneral, 'Cambria Math', 'Arial Unicode MS', serif;
+      font-style: normal;
+      font-weight: normal
+    }
+
+    .MJXc-TeX-unknown-I {
+      font-family: STIXGeneral, 'Cambria Math', 'Arial Unicode MS', serif;
+      font-style: italic;
+      font-weight: normal
+    }
+
+    .MJXc-TeX-unknown-B {
+      font-family: STIXGeneral, 'Cambria Math', 'Arial Unicode MS', serif;
+      font-style: normal;
+      font-weight: bold
+    }
+
+    .MJXc-TeX-unknown-BI {
+      font-family: STIXGeneral, 'Cambria Math', 'Arial Unicode MS', serif;
+      font-style: italic;
+      font-weight: bold
+    }
+
+    .MJXc-TeX-ams-R {
+      font-family: MJXc-TeX-ams-R, MJXc-TeX-ams-Rw
+    }
+
+    .MJXc-TeX-cal-B {
+      font-family: MJXc-TeX-cal-B, MJXc-TeX-cal-Bx, MJXc-TeX-cal-Bw
+    }
+
+    .MJXc-TeX-frak-R {
+      font-family: MJXc-TeX-frak-R, MJXc-TeX-frak-Rw
+    }
+
+    .MJXc-TeX-frak-B {
+      font-family: MJXc-TeX-frak-B, MJXc-TeX-frak-Bx, MJXc-TeX-frak-Bw
+    }
+
+    .MJXc-TeX-math-BI {
+      font-family: MJXc-TeX-math-BI, MJXc-TeX-math-BIx, MJXc-TeX-math-BIw
+    }
+
+    .MJXc-TeX-sans-R {
+      font-family: MJXc-TeX-sans-R, MJXc-TeX-sans-Rw
+    }
+
+    .MJXc-TeX-sans-B {
+      font-family: MJXc-TeX-sans-B, MJXc-TeX-sans-Bx, MJXc-TeX-sans-Bw
+    }
+
+    .MJXc-TeX-sans-I {
+      font-family: MJXc-TeX-sans-I, MJXc-TeX-sans-Ix, MJXc-TeX-sans-Iw
+    }
+
+    .MJXc-TeX-script-R {
+      font-family: MJXc-TeX-script-R, MJXc-TeX-script-Rw
+    }
+
+    .MJXc-TeX-type-R {
+      font-family: MJXc-TeX-type-R, MJXc-TeX-type-Rw
+    }
+
+    .MJXc-TeX-cal-R {
+      font-family: MJXc-TeX-cal-R, MJXc-TeX-cal-Rw
+    }
+
+    .MJXc-TeX-main-B {
+      font-family: MJXc-TeX-main-B, MJXc-TeX-main-Bx, MJXc-TeX-main-Bw
+    }
+
+    .MJXc-TeX-main-I {
+      font-family: MJXc-TeX-main-I, MJXc-TeX-main-Ix, MJXc-TeX-main-Iw
+    }
+
+    .MJXc-TeX-main-R {
+      font-family: MJXc-TeX-main-R, MJXc-TeX-main-Rw
+    }
+
+    .MJXc-TeX-math-I {
+      font-family: MJXc-TeX-math-I, MJXc-TeX-math-Ix, MJXc-TeX-math-Iw
+    }
+
+    .MJXc-TeX-size1-R {
+      font-family: MJXc-TeX-size1-R, MJXc-TeX-size1-Rw
+    }
+
+    .MJXc-TeX-size2-R {
+      font-family: MJXc-TeX-size2-R, MJXc-TeX-size2-Rw
+    }
+
+    .MJXc-TeX-size3-R {
+      font-family: MJXc-TeX-size3-R, MJXc-TeX-size3-Rw
+    }
+
+    .MJXc-TeX-size4-R {
+      font-family: MJXc-TeX-size4-R, MJXc-TeX-size4-Rw
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-ams-R;
+      src: local('MathJax_AMS'), local('MathJax_AMS-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-ams-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_AMS-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-cal-B;
+      src: local('MathJax_Caligraphic Bold'), local('MathJax_Caligraphic-Bold')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-cal-Bx;
+      src: local('MathJax_Caligraphic');
+      font-weight: bold
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-cal-Bw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Bold.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Bold.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-frak-R;
+      src: local('MathJax_Fraktur'), local('MathJax_Fraktur-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-frak-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-frak-B;
+      src: local('MathJax_Fraktur Bold'), local('MathJax_Fraktur-Bold')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-frak-Bx;
+      src: local('MathJax_Fraktur');
+      font-weight: bold
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-frak-Bw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Bold.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Bold.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-math-BI;
+      src: local('MathJax_Math BoldItalic'), local('MathJax_Math-BoldItalic')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-math-BIx;
+      src: local('MathJax_Math');
+      font-weight: bold;
+      font-style: italic
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-math-BIw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_Math-BoldItalic.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Math-BoldItalic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Math-BoldItalic.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-sans-R;
+      src: local('MathJax_SansSerif'), local('MathJax_SansSerif-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-sans-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-sans-B;
+      src: local('MathJax_SansSerif Bold'), local('MathJax_SansSerif-Bold')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-sans-Bx;
+      src: local('MathJax_SansSerif');
+      font-weight: bold
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-sans-Bw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Bold.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Bold.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-sans-I;
+      src: local('MathJax_SansSerif Italic'), local('MathJax_SansSerif-Italic')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-sans-Ix;
+      src: local('MathJax_SansSerif');
+      font-style: italic
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-sans-Iw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Italic.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Italic.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-script-R;
+      src: local('MathJax_Script'), local('MathJax_Script-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-script-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_Script-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Script-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Script-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-type-R;
+      src: local('MathJax_Typewriter'), local('MathJax_Typewriter-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-type-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_Typewriter-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Typewriter-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Typewriter-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-cal-R;
+      src: local('MathJax_Caligraphic'), local('MathJax_Caligraphic-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-cal-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-main-B;
+      src: local('MathJax_Main Bold'), local('MathJax_Main-Bold')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-main-Bx;
+      src: local('MathJax_Main');
+      font-weight: bold
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-main-Bw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_Main-Bold.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-main-I;
+      src: local('MathJax_Main Italic'), local('MathJax_Main-Italic')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-main-Ix;
+      src: local('MathJax_Main');
+      font-style: italic
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-main-Iw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_Main-Italic.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-main-R;
+      src: local('MathJax_Main'), local('MathJax_Main-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-main-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-math-I;
+      src: local('MathJax_Math Italic'), local('MathJax_Math-Italic')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-math-Ix;
+      src: local('MathJax_Math');
+      font-style: italic
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-math-Iw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_Math-Italic.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-size1-R;
+      src: local('MathJax_Size1'), local('MathJax_Size1-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-size1-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_Size1-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-size2-R;
+      src: local('MathJax_Size2'), local('MathJax_Size2-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-size2-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_Size2-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-size3-R;
+      src: local('MathJax_Size3'), local('MathJax_Size3-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-size3-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_Size3-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-size4-R;
+      src: local('MathJax_Size4'), local('MathJax_Size4-Regular')
+    }
+
+    @font-face {
+      font-family: MJXc-TeX-size4-Rw;
+      src
+      /*1*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/eot/MathJax_Size4-Regular.eot');
+      src
+      /*2*/
+      : url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')
+    }
+  </style>
+</head>
+
+<body>
+  <div id="MathJax_Message" style="display: none;"></div>
+  <header class="site-header" role="banner">
+    <div class="wrapper">
+      <!-- <a class="site-title" href="https://jalevine.bitbucket.io/">Joshua A. Levine</a> -->
+      <nav class="site-nav">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z">
+            </path>
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z">
+            </path>
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z">
+            </path>
+          </svg>
+        </span>
+        
+      </nav>
+    </div>
+  </header>
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline">Assignment 01</h1>
+          <h2 itemprop="name headline">Image Basics</h2>
+          <h4 itemprop="name headline">Submission in pairs is allowed</h4>
+        
+          <p>
+            Homework Due: Sep. 10, 2020 23:59:59 PM<br>
+            Graded: Sep. 18, 2020<br>
+            Percentage of Grade: 4%
+            (Programming: 3%, Written 1%)<br>
+            Assignment Description: <strong>Finalized</strong><br>
+          </p>
+        </header>
+        <div class="post-content" itemprop="articleBody">
+          <ul id="markdown-toc">
+            <li>Objectives</a></li>
+            <li><a
+                href="part-1-setting-up-your-repository">Part 1: Setting up your repository</a></li>
+            <li><a href="part-2-your-program">Part 2: Your program</a></li>
+            <li><a
+                href="written-component-survey">Written Component: Survey</a></li>
+            <li><a href="submission"></a>
+                id="markdown-toc-submission">Submission</a></li>
+            <li><a href="#grading">Grading</a></li>
+          </ul>
+          <p>In this assignment, you will develop a simple program for loading, displaying and <b>manipulating</b>
+            an image formatted in the <a href="https://en.wikipedia.org/wiki/Netpbm_format">PPM P6 format</a> . The
+            manipulation include rotating and scaling o
+            this image. </p>
+          <h2 id="objectives">Objectives</h2>
+          <p>This assignment is designed to teach you the basics of working with:</p>
+          <ul>
+            <li>Image files and file formats</li>
+            <li>The structure of a web application that uses Javacsript, HTML, and simple HTML5 canvas operations</li>
+            <li>Javascript syntax and developing programs in Javascript</li>
+            <li>Maipulating indevidual pixels. Understanding the image as a two-dimensional arrays.
+              Understand basic geometric trasnformations.
+
+            </li>
+            <li>Submitting assignments using git and <a href="https://github.com/">GitHub</a>.</li>
+            <li>Testing your program.</li>
+            <li>My and the grader’s expectations for programs and our rubrics.</li>
+          </ul>
+          <h2 id="part-1-setting-up-your-repository">Part 1: Setting up your repository</h2>
+          <p>If you haven’t already, you need to create an account on <a href="https://github.com/join">GitHub</a>. You
+            should also <a href="https://education.github.com/">enable academic access</a> if you haven’t already by
+            “Requesting a discount” for your “Individual Account”.</p>
+          <p>Next, you’ll create a repository for your assignment. If you are a 433 student, please follow <a
+              href="https://classroom.github.com/a/m1DvA61S">this link</a>, where as if you are a 533 student, please
+            follow <a href="https://classroom.github.com/a/u-98a9Be">this link</a></p>
+          <p>If you aren’t comfortable yet with git, please try out some tutorials online! <a
+              href="https://try.github.io/">try.github.io</a> is great, as is <a
+              href="http://rogerdudler.github.io/git-guide/">http://rogerdudler.github.io/git-guide/</a>, <a
+              href="https://www.atlassian.com/git/tutorials">https://www.atlassian.com/git/tutorials</a>, and <a
+              href="https://git-scm.com/docs/gittutorial">https://git-scm.com/docs/gittutorial</a>.</p>
+          <p>We will use git the entire semester, and this assignment is meant to get
+            you started. Feel free to use a GUI client for git, but you may also want to consider learning how to use it
+            from a terminal. Since I will managing the repositories, you likely will only need to learn four commands:
+          </p>
+          <figure class="highlight">
+            <pre><code class="language-shell" data-lang="shell">git clone
+git add
+git commit
+git push</code></pre>
+          </figure>
+          <h2 id="part-2-your-program">Part 2: Your program</h2>
+          <p>To start with, your repo includes 3 files and 1 directory.</p>
+          <p>First examine <code class="highlighter-rouge">index.html</code> in a text editor. Please change the title
+            of this html file and feel free to make any other cosmetic changes to the look and layout. This webpage
+            includes only three components: (1) An html canvas with the id <code
+              class="highlighter-rouge">canvas</code>, (2) A div tag that includes both a input tag for loading files
+            and an empty href tag to download images for saving, and (3) a script tag that imports the template
+            Javascript file <code class="highlighter-rouge">a01.js</code>.</p>
+          <p>Within <code class="highlighter-rouge">a01.js</code>, you’ll find a couple of components. First, we access
+            the DOM objects associated with the canvas and the load/save elements. We also directly access the context
+            of the canvas. We next connect up listeners for the file load and save elements. Finally, we define two
+            empty functions (that you will fill in) for loading (or uploading) the input file and for saving (or
+            downloading) the displayed image. Your main task in this assignment is to complete these two functions. Feel
+            free to define helper functions as needed.</p>
+          <p>You can assume all PPM images will be provided in the <code class="highlighter-rouge">P6</code> format. PPM
+            images have a <a href="http://netpbm.sourceforge.net/doc/ppm.html">simple format</a>, that you must parse:
+          </p>
+          <figure class="highlight">
+            <pre><code class="language-shell" data-lang="shell">P6  
+<span class="c"># COMMENTS always start with a pound sign, skip these lines  </span>
+<span class="o">[</span>WIDTH] <span class="o">[</span>HEIGHT]  
+<span class="o">[</span>MAX VALUE] 
+<span class="o">[</span>RAW DATA]</code></pre>
+          </figure>
+          <p>For this assignment, you need only support PPM files with a <code
+              class="highlighter-rouge">[MAX VALUE]</code> of 255. All portions of the above header are in ASCII except
+            for the raw data, which is encoded directly as binary data.</p>
+          <h4 id="image-reader">Image Reader</h4>
+          <p>Parsing files like this in Javascript can be a bit tricky. You will have to employ the <code
+              class="highlighter-rouge">FileReader</code> class in Javascript and the function <code
+              class="highlighter-rouge">readAsBinaryString()</code> I recommend the following helpful documentation: <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsBinaryString">https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsBinaryString</a>
+            if you want to understand the example I provided.</p>
+          <p>After loading, you should have the entire file as one long Javascript String. Note that Strings are encoded
+            UTF-16 characters, which will cause problems when parsing the older PPM format. But, at least you will get
+            access to the high-level String methods. I recommend reading <a
+              href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods</a>.
+            In particular, you’ll have to parse the ASCII header line-by-line, and then check if the first character of
+            the line begins with a comment.</p>
+          <p>After parsing the header to extract the width and height, you’ll then need to interpret the raw bytes as
+            integers. To do so, you’ll need a key Javascript function <code
+              class="highlighter-rouge">charCodeAt()</code> (see <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt</a>)
+          </p>
+          <h4 id="image-display">Image Display</h4>
+          <p>Internally, you can store the raw data in whatever format you like at this point. I recommend using a <code
+              class="highlighter-rouge">Uint8Array</code> of length <span class="MathJax_Preview"
+              style="color: inherit; display: none;"></span><span id="MathJax-Element-1-Frame"
+              class="mjx-chtml MathJax_CHTML" tabindex="0"
+              data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;mo&gt;&amp;#x00D7;&lt;/mo&gt;&lt;mi&gt;W&lt;/mi&gt;&lt;mo&gt;&amp;#x00D7;&lt;/mo&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;/math&gt;"
+              role="presentation" style="font-size: 118%; position: relative;"><span id="MJXc-Node-1" class="mjx-math"
+                aria-hidden="true"><span id="MJXc-Node-2" class="mjx-mrow"><span id="MJXc-Node-3" class="mjx-mn"><span
+                      class="mjx-char MJXc-TeX-main-R"
+                      style="padding-top: 0.366em; padding-bottom: 0.366em;">4</span></span><span id="MJXc-Node-4"
+                    class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R"
+                      style="padding-top: 0.185em; padding-bottom: 0.306em;">×</span></span><span id="MJXc-Node-5"
+                    class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I"
+                      style="padding-top: 0.487em; padding-bottom: 0.306em; padding-right: 0.104em;">W</span></span><span
+                    id="MJXc-Node-6" class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R"
+                      style="padding-top: 0.185em; padding-bottom: 0.306em;">×</span></span><span id="MJXc-Node-7"
+                    class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I"
+                      style="padding-top: 0.487em; padding-bottom: 0.306em; padding-right: 0.057em;">H</span></span></span></span><span
+                class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <mn>4</mn>
+                  <mo>×</mo>
+                  <mi>W</mi>
+                  <mo>×</mo>
+                  <mi>H</mi>
+                </math></span></span>
+            <script type="math/tex" id="MathJax-Element-1">4\times W\times H</script>
+            , which stores the RGB channels of the image, as well as a fourth A channel, in the format used by the
+            ImageData object of the canvas. Each of the R, G, and B channels store their values in one byte, and for now
+            just assume the A channel will always be stored as the value 255. Note that <code
+              class="highlighter-rouge">Uint8Array</code> is one of the typed arrays in Javascript, which provide a bit
+            more fine-grained control over the memory layout than a standard Javascript array.</p>
+          <p>Once you’ve read the uploaded image, you’ll want to both update the size of the canvas as well as fill in
+            the pixel information. You may find this tutorial particularly helpful: <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas</a>
+          </p>
+          <!------
+<h4 id="image-writer">Image Writer</h4>
+<p>Finally, to complete the download functionality, you need to do the loading steps roughly in reverse.  Particularly, your download function should get the current width and height <em>of the canvas</em> as well as accessing the current data of the canvas using <em>ctx.getImageData()</em>.  While in this assignment we are only loading/saving one image at a time, future assignments will manipulate the canvas between loading/saving, so you want to be always saving what is displayed, not what is stored in any intermediate buffers.</p>
+<p>To save, you will need to (1) create a string header, (2) access the raw byte data from the canvas and convert it to character bytes, and (3) update the anchor tag (dynamically) to save the file.  To prepare the output data, you’ll create a new <code class="highlighter-rouge">Uint8Array</code> that is the length of the header plus <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span id="MathJax-Element-2-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mo&gt;&amp;#x00D7;&lt;/mo&gt;&lt;mi&gt;W&lt;/mi&gt;&lt;mo&gt;&amp;#x00D7;&lt;/mo&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="font-size: 118%; position: relative;"><span id="MJXc-Node-8" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-9" class="mjx-mrow"><span id="MJXc-Node-10" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.366em; padding-bottom: 0.366em;">3</span></span><span id="MJXc-Node-11" class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.185em; padding-bottom: 0.306em;">×</span></span><span id="MJXc-Node-12" class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.487em; padding-bottom: 0.306em; padding-right: 0.104em;">W</span></span><span id="MJXc-Node-13" class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.185em; padding-bottom: 0.306em;">×</span></span><span id="MJXc-Node-14" class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.487em; padding-bottom: 0.306em; padding-right: 0.057em;">H</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn><mo>×</mo><mi>W</mi><mo>×</mo><mi>H</mi></math></span></span><script type="math/tex" id="MathJax-Element-2">3\times W \times H</script>.  For step (1), you should make use of <code class="highlighter-rouge">charCodeAt</code> to convert the header string to ASCII bytes.  For (2), you will skip the A channel from the data stored in the context.  Finally, for (3), you should create a new Blob from the encoded PPM file and then update the <code class="highlighter-rouge">href</code> of the output tag using <code class="highlighter-rouge">createObjectURL</code>.  I’ve provided an example skeleton to get you started as these calls are tricky to discover.</p>
+---->
+          <h4 id="testing--debugging">Image rotation and Scaling </h4>
+          Display the image on the canvas.
+          The center of the image should be aligned with the center of the display window at all times.
+          Next, animate the image so that it rotates perpendicular to the view axis,
+          either clockwise or counter-clockwise, as shown in the figure below. The image should finish a full
+          cycle every few seconds.
+          For simplicity, you can fix the picture aspect ratio at 1:1 with a resolution of 600\tm 600 pixels.
+
+          <p>
+
+          </p><b>For undergrad students:</b> The display window should be larger than the image (in its dimensions) so
+          the image can
+          make a full cycle and be seen at all the times (i.e. no pixels are cropped out).
+          </p>
+
+          <p><b>For graduate students</b> While rotating, the image should also shrink (scale down) and expand. It
+            should reach
+            each maximum size every fourth cycle, and its minimum size every fourth cycle. In its maximum size, the
+            image
+            should be 4 times larger than the the window. This means that if the width of both the image and the window
+            are both 600\tm 600 pixels, then when the image is in its max size only roughly 150\tm 150 image pixels are
+            visible in the window. When the image is in its minimal size, then most of the window pixels are black, and
+            the image is presented in a small region of about 150\tm 150 pixels.</p>
+
+          <p> Needless to say: You could not use any libary that performs 'rotations' or 'scaling'. These operaions
+            should be implemented by you. </p>
+
+          <p> Pay attention to how the colors of image pixels are mapped to the pixels in the window. This is where the
+            2D transformation will come into play. Do not leave pixels in the display window whose color is not
+            assigned.
+
+          <p> Your program should be reasonably efficient. So avoid unnecessary nested loops. </p>
+
+
+          <h4 id="testing--debugging">Testing / Debugging</h4>
+          <p>The expectation is that we will use this file I/O routine in numerous future assignments, potentially with
+            modifications. Design carefully with this in mind!</p>
+          <p>Test your program with the images found in the <code class="highlighter-rouge">data/</code> subdirectory of
+            the default repo. You may also want to test with other images you find – you should be able to convert them
+            to PPM format using a variety of tools, but be careful as some converters may produce images with the
+            extension <code class="highlighter-rouge">.ppm</code> where the <code
+              class="highlighter-rouge">[MAX VALUE]</code> may not always be 255 or the format may not be <code
+              class="highlighter-rouge">P6</code>.</p>
+          <h2 id="written-component-survey">Written Component: Survey</h2>
+          <p>For the written portion of the assignment, create a second plain-text ASCII
+            file, named <code class="highlighter-rouge">survey.txt</code>, and also place it in the top-level directory
+            of your
+            git-repository. <em>Commit</em> and <em>push</em> this file after filling out the following
+            survey, with answers formatted roughly like this:</p>
+          <figure class="highlight">
+            <pre><code class="language-plaintext" data-lang="plaintext">1. I loved video games and want to know how they work.
+
+2. Cool ways to make pictures with computers!  
+
+3. C++ (10), Python (5), LOLCODE (2)
+
+...</code></pre>
+          </figure>
+          <p>You are not required to answer any of the questions if you don’t want to, but non-submission does not
+            count! Please write “no answer” for any question that you choose not to answer.</p>
+          <p>I am going to use the answers to calibrate the remainder of the course, so this is an opportunity for you
+            to influence where the course goes. There are no right or wrong answers in this questionnaire. All I ask is
+            you answer honestly, without trying to figure out what I might want to read. The more you write, the more
+            I’ll know about your expectations and what you are interested in.</p>
+          <h3 id="survey-questions">Survey Questions</h3>
+          <ol>
+            <li>
+              <p>Why are you taking this course?</p>
+            </li>
+            <li>
+              <p>What do you think you’ll learn in this course?</p>
+            </li>
+            <li>
+              <p>List the three programming languages you are most comfortable
+                with, with how many years of experience you have with each</p>
+            </li>
+            <li>
+              <p>What experience do you have with Javascript? Have you used OOP in
+                Javascript?</p>
+            </li>
+            <li>
+              <p>What’s the best computer graphics you’ve ever seen? Why do you like it?</p>
+            </li>
+            <li>
+              <p>What’s the worst computer graphics you’ve ever seen? Why do you not like it?</p>
+            </li>
+            <li>
+              <p>Tell me about something cool you learned recently. If you were meeting with a friend, what would you
+                chat about? Possible answers: books, movies, TV shows, blogs, podcasts, etc. It does not have to be
+                about computer graphics.</p>
+            </li>
+          </ol>
+          <h2 id="submission">Submission</h2>
+          <p>You should use git to submit all source code files. The expectation is that your code will be graded by
+            cloning your repo and then executing it within a modern browser (Chrome, Firefox, etc.)</p>
+          <p>Please provide a <code class="highlighter-rouge">README.md</code> file that provides a text description of
+            how to run your program and any parameters that you used. Also document any idiosyncrasies, behaviors, or
+            bugs of note that you want us to be aware of.</p>
+          <p>To summarize, my expectation is that your repo will contain:</p>
+          <ol>
+            <li>A <code class="highlighter-rouge">README.md</code> file</li>
+            <li>A <code class="highlighter-rouge">survey.txt</code> file, 
+              PM</li>
+            <li>A <code class="highlighter-rouge">index.html</code> file</li>
+            <li>A <code class="highlighter-rouge">a01.js</code> file</li>
+            <li>Any other <code class="highlighter-rouge">.js</code> files that you authored.</li>
+            <li>(Optionally) any other test images that you want.</li>
+          </ol>
+          <h2 id="grading">Grading</h2>
+          <h4 id="deductions">Deductions</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td width="75%"> <strong>Reason</strong> </td>
+                <td width="25%"> <strong>Value</strong> </td>
+              </tr>
+              <tr>
+                <td colspan="2" style="padding: 0px; margin: 0px; height: 0px; border-bottom: 1px solid black;"></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;"> Program crashes due to bugs </td>
+                <td> -10 each bug at grader's discretion to fix </td>
+              </tr>
+            </tbody>
+          </table>
+          <p><br></p>
+          <h4 id="point-breakdown-of-features">Point Breakdown of Features</h4>
+          <table>
+            <tbody>
+              <tr>
+                <td width="75%"> <strong>Requirement</strong> </td>
+                <td width="25%"> <strong>Value</strong> </td>
+              </tr>
+              <tr>
+                <td colspan="2" style="padding: 0px; margin: 0px; height: 0px; border-bottom: 1px solid black;"></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;"> Consistent modular coding style, clear organization of files </td>
+                <td> 10 </td>
+              </tr>
+              <tr style="background-color: gainsboro;">
+                <td style="padding: 5px;"> External documentation (README.md) </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;"> Class documentation, Internal documentation (Block and Inline). Wherever
+                  applicable / for all files </td>
+                <td> 15 </td>
+              </tr>
+              <tr style="background-color: gainsboro;">
+                <td style="padding: 5px;"> Expected output / behavior based on the assignment specification,
+                  including<br>
+                  <br>
+                  <center>
+                    <table width="95%">
+                      <tbody>
+                        <tr style="background-color: aliceblue;">
+                          <td style="padding: 5px;">Loading: Correctly parsing P6 PPM format and storing it internally.
+                          </td>
+                          <td>20</td>
+                        </tr>
+                        <tr style="background-color: mistyrose;">
+                          <td style="padding: 5px;">Properly resizing the canvas on load and tracking the image
+                            dimensions throughout the program.</td>
+                          <td>15</td>
+                        </tr>
+                        <tr style="background-color: aliceblue;">
+                          <td style="padding: 5px;">Displaying: Code correctly displays the PPM image in an HTML Canvas
+                          </td>
+                          <td>15</td>
+                        </tr>
+                        <tr style="background-color: mistyrose;">
+                          <td style="padding: 5px;">Saving: allowing the user to save (download) the displayed image
+                          </td>
+                          <td>20</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </center>
+                  <br>
+                </td>
+                <td> 70 </td>
+              </tr>
+              <tr>
+                <td colspan="2" style="padding: 0px; margin: 0px; height: 0px; border-bottom: 1px solid black;"></td>
+              </tr>
+              <tr>
+                <td> Total </td>
+                <td> 100 </td>
+              </tr>
+            </tbody>
+          </table>
+          <p><br></p>
+          <h4 id="cumulative-relationship-to-final-grade">Cumulative Relationship to Final Grade</h4>
+          <ul>
+            <li>
+              <p>Programming: Worth 3% of your final grade</p>
+            </li>
+            <li>
+              <p>Written Assignment (Survey completion): Worth 1% of your final grade</p>
+            </li>
+          </ul>
+          <p><br></p>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrapper">
+      <h2 class="footer-heading">Contact:</h2>
+      <div class="footer-col-wrapper">
+        <div class="footer-col">
+          <a href="http://www.cs.arizona.edu/">Department of Computer Science</a><br>
+          <a href="http://www.arizona.edu/">University of Arizona</a><br>
+          754 Gould-Simpson<br>
+          1040 E. 4th Street<br>
+          Tucson, AZ 85721, USA<br>
+          Phone: +1-520-621-3153<br>
+          <br>
+          Email: [username]@email.arizona.edu, my username is josh.<br>
+          <br>
+          Last Updated: 2020-06-09 17:39:19 -0700
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
